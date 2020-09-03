@@ -1,0 +1,41 @@
+El programa de muestra es muy simple. Es un programa para calcular e imprimir una declaración de un
+cargos del cliente en una tienda de videos. Al programa se le dice qué películas alquiló un cliente y por
+cuánto tiempo. Luego calcula los cargos, que dependen de cuánto tiempo se alquila la película, y
+identifica el tipo de película. Hay tres tipos de películas: regulares, para niños y nuevos estrenos.
+Además de calcular los cargos, el estado de cuenta también calcula los puntos de inquilinos frecuentes, que varían
+dependiendo de si la película es un nuevo estreno.
+
+
+Despues de statements
+
+¿Cuáles son sus impresiones sobre el diseño de este programa? Lo describiría como no bien
+diseñado y ciertamente no orientado a objetos. Para un programa simple como este, eso no
+importar. No hay nada de malo en un programa simple rápido y sucio. Pero si este es un representante
+fragmento de un sistema más complejo, entonces tengo algunos problemas reales con este programa. Así de largo
+La rutina de instrucciones en la clase Cliente hace demasiado. Muchas de las cosas que hace deberían
+realmente lo hagan las otras clases.
+
+Aun así, el programa funciona. ¿No es esto solo un juicio estético, una aversión al código desagradable? Es
+hasta que queramos cambiar el sistema. Al compilador no le importa si el código es feo o limpio.
+Pero cuando cambiamos el sistema, hay un humano involucrado, y a los humanos sí les importa. Un mal
+El sistema diseñado es difícil de cambiar. Difícil porque es difícil averiguar dónde están los cambios
+necesario. Si es difícil averiguar qué cambiar, existe una gran posibilidad de que el programador
+cometerá un error e introducirá errores.
+
+En este caso, tenemos un cambio que a los usuarios les gustaría hacer. Primero quieren una declaración
+impreso en HTML para que la declaración pueda estar habilitada para la Web y totalmente compatible con las palabras de moda.
+Considere el impacto que tendría este cambio. Al mirar el código, puede ver que es imposible reutilizar cualquiera de los comportamientos del método de declaración actual para una declaración HTML.
+Su único recurso es escribir un método completamente nuevo que duplique gran parte del comportamiento de
+declaración. Ahora, por supuesto, esto no es demasiado oneroso. Puede simplemente copiar el método de declaración y
+haga los cambios que necesite.
+Pero, ¿qué sucede cuando cambian las reglas de cobro? Tienes que arreglar tanto la declaración como
+htmlStatement y asegúrese de que las correcciones sean coherentes. El problema de copiar y pegar
+el código viene cuando tienes que cambiarlo más tarde. Si está escribiendo un programa que no espera
+para cambiar, luego cortar y pegar está bien. Si el programa es de larga duración y es probable que cambie, entonces corte
+y pegar es una amenaza.
+Esto me lleva a un segundo cambio. Los usuarios quieren realizar cambios en la forma en que clasifican
+películas, pero aún no han decidido el cambio que van a realizar. Tienen un numero
+de cambios en la mente. Estos cambios afectarán tanto la forma en que se cobra a los inquilinos por las películas como
+la forma en que se calculan los puntos de inquilinos frecuentes. Como desarrollador experimentado, está seguro de que
+sea ​​cual sea el esquema que se les ocurra a los usuarios, la única garantía que tendrá es que
+cámbielo nuevamente dentro de los seis meses.
