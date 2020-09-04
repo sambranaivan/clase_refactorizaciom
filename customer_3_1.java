@@ -19,7 +19,8 @@ class Customer {
         while (rentals.hasMoreElements()) {
             double thisAmount = 0;
             Rental each = (Rental) rentals.nextElement();
-            thisAmount = each.getCharge();
+            // thisAmount = amountFor(each);
+            thisAmount = amountFor(each);
             // add frequent renter points
             frequentRenterPoints++;
             // add bonus for a two day new release rental
@@ -38,7 +39,9 @@ class Customer {
         return result;
     }
 
- 
+    private double amountFor(Rental aRental) {
+        return aRental.getCharge();
+    }
 
 }
 
